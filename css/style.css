@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 50%;
+    height: 500px;
+    margin: 3rem auto;
+    border: 1px solid black;
+    background-color: rgba(32, 178, 170, 0.5);
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    margin: 0 1rem;
+    
+}
+
+.username {
+    margin-right: 1rem;
+}
+
+.previous {
+    margin-right: .5rem;
+}
+
+.button {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 15px;
+}
+
+.all-card {
+    display: flex;
+    width: 100%;
+    height: 430px;
+    text-align: center;
+    background-color: rgba(32, 178, 170, 0.5);
+}
+
+.card1 {
+    display: none;
+    width: calc(100% / 3);
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+.card2 {
+    display: none;
+    width: calc(100% / 3);
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+.card3 {
+    display: none;
+    width: calc(100% / 3);
+    border: 1px solid black;
+    padding: 1rem;
+}
+/* CLASSI PER MOSTRARE E NASCONDERE CARD AL CLICK */
+.none {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+/* ***** QUESTE 3 CLASSI LE HO FATTE IN MANIERA FORZATA ****** */
+.width-100 {
+    width: 100%;
+}
+
+.width-50 {
+    width: 50%;
+}
+
+.width-33 {
+    width: 33.33%;
+}
