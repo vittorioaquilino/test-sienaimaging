@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,14 @@
     <title>Document</title>
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- vue js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </head>
+
 <body>
     <!-- main -->
     <main>
+        <div id="root">
             <div class="container">
                 <div class="user">
                     <div class="username">Vittorio Aquilino</div>
@@ -20,14 +25,37 @@
                     <button class="next button">+</button>
                 </div>
                 <div class="all-card">
-                    <div class="card1">1</div>
-                    <div class="card2">2</div>
-                    <div class="card3">3</div>
+                    <div class="card1">
+                        <form>
+                            <input type="file" id="fileInput" name="picture">
+                            <div class="img-container">
+                                <img src="" id="image" alt="">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card2">
+                        <form>
+                            <input type="file" id="fileInput" name="picture">
+                            <div class="img-container">
+                                <img src="" id="image" alt="">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card3">
+                        <form>
+                            <input type="file" id="fileInput" name="picture">
+                            <div class="img-container">
+                                <img src="" id="image" alt="">
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
+        </div>
     </main>
     <!-- /main -->
 
     <script src="js/script.js"></script>
 </body>
+
 </html>

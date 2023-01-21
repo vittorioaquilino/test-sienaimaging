@@ -85,3 +85,14 @@
 .width-33 {
     width: 33.33%;
 }
+
+.img-container {
+    width: 150px;
+    height: 150px;
+    margin: .5rem auto;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
