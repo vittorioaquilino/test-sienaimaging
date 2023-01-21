@@ -10,22 +10,22 @@ let card3 = document.querySelector('.card3');
 // dichiariamo una variabile per il contatore
 let clickCount1 = 0;
 
-// creo un addEventListener per il click del bottone next
-btn2.addEventListener('click', function next() {
-    switch(clickCount1) {
-        // al primo click sarà visibile solo card1
+// creo un metodo per il click del bottone next
+function next() {
+    switch (clickCount1) {
+        // al primo caso sarà visibile solo la prima card
         case 0:
             card1.classList.add('block', 'width-100');
             card2.classList.add('none');
             card3.classList.add('none');
             break;
-        // al secondo click sarà visibile solo card1 e card2
+        // al secondo caso sarà visibile la prima e la seconda card
         case 1:
             card1.classList.add('block', 'width-50');
             card2.classList.add('block', 'width-50');
             card3.classList.add('none');
             break;
-        // al terzo click saranno visibili tutte e 3 le card
+        // al terzo caso sarà visibile la prima, la seconda e la terza card
         case 2:
             card1.classList.add('block', 'width-33');
             card2.classList.add('block', 'width-33');
@@ -34,21 +34,54 @@ btn2.addEventListener('click', function next() {
     }
     clickCount1++;
     console.log(clickCount1);
-});
+}
+// associo il bottone alla chiamata del metodo
+btn2.addEventListener('click', next);
 
+// creo un metodo per il click del bottone previous
+function previous() {
+    switch (clickCount1) {
+        // al primo caso sarà visibile solo la prima card e la seconda card
+        case 3:
+            card1.classList.remove('width-33');
+            card2.classList.remove('width-33');
+            card3.classList.remove('block');
+            break;
+        // al secondo caso sarà visibile solo la prima card
+        case 2:
+            card1.classList.remove('width-50');
+            card2.classList.remove('block');
+            break;
+    }
+    clickCount1--;
+    console.log(clickCount1);
+}
+// associo il bottone alla chiamata del metodo
+btn1.addEventListener('click', previous);
 
 // metodo per la visualizzazione dell'immagine
-var input = document.getElementById("fileInput");
-var img = document.getElementById("image");
-input.addEventListener("change", function(){
-  var file = input.files[0];
-  var reader = new FileReader();
-  reader.onload = function(){
-    img.src = reader.result;
-  }
-  reader.readAsDataURL(file);
+// dichiaro variabile input per prelevare il valore dal DOM
+const input = document.getElementById("fileInput");
+// dichiaro variabile img per prelevare il valore dal DOM
+const img = document.getElementById("image");
+// al click dell'input
+input.addEventListener("change", function () {
+    // aggiungo la classe block all'immagine
+    img.classList.add("block");
+    // dichiaro una variabile file a 0
+    let file = input.files[0];
+    // dichiaro una variabile reader per leggere il file
+    let reader = new FileReader();
+    // al caricamento del file
+    reader.onload = function () {
+        // aggiungo l'immagine al src
+        img.src = reader.result;
+    }
+    // leggo il file
+    reader.readAsDataURL(file);
 });
 
 
 
- 
+
+
