@@ -4,12 +4,15 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 .container {
     width: 80%;
     height: 700px;
     margin: 3rem auto;
-    border: 1px solid black;
-    background-color: rgba(32, 178, 170, 0.5);
+    background-color: lightgreen;
 }
 
 .user {
@@ -17,7 +20,7 @@
     align-items: center;
     height: 5%;
     margin: 0 1rem;
-    
+    justify-content: center;
 }
 
 .username {
@@ -28,12 +31,25 @@
     margin-right: .5rem;
 }
 
+.previous:hover {
+    cursor: pointer;
+    background-color: orange;
+    color: white;
+}
+
+.next:hover {
+    cursor: pointer;
+    background-color: orange;
+    color: white;
+}
+
 .button {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     border: 1px solid black;
     text-align: center;
-    line-height: 15px;
+    line-height: 20px;
+    border-radius: 50%;
 }
 
 .all-card {
@@ -41,28 +57,30 @@
     width: 100%;
     height: 95%;
     text-align: center;
-    background-color: rgba(32, 178, 170, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .card1 {
     display: none;
     width: calc(100% / 3);
-    border: 1px solid black;
     padding: 1rem;
+    box-shadow: 10px 10px 5px grey;
 }
 
 .card2 {
     display: none;
     width: calc(100% / 3);
-    border: 1px solid black;
     padding: 1rem;
+    box-shadow: 10px 10px 5px grey;
+
 }
 
 .card3 {
     display: none;
     width: calc(100% / 3);
-    border: 1px solid black;
     padding: 1rem;
+    box-shadow: 10px 10px 5px grey;
+
 }
 /* CLASSI PER MOSTRARE E NASCONDERE CARD AL CLICK */
 .none {

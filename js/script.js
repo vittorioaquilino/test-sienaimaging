@@ -7,6 +7,7 @@ let card1 = document.querySelector('.card1');
 let card2 = document.querySelector('.card2');
 let card3 = document.querySelector('.card3');
 
+
 // dichiariamo una variabile per il contatore
 let clickCount1 = 0;
 
